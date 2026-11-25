@@ -7,11 +7,11 @@
 <meta name="description" content="Пример страницы записи для салона красоты: услуги и цены, онлайн-запись, заявки сразу в Telegram и в таблицу.">
 <style>
 :root{
-  --black:#000;
-  --light:#e0dedd;
-  --light2:#d6d4d2;
-  --red:#891a20;
-  --white:#fff;
+  --black:#17160f;
+  --light:#e8e4da;
+  --light2:#ddd8cb;
+  --red:#7b4a44;
+  --white:#f6f4ee;
   --mono:ui-monospace,SFMono-Regular,"JetBrains Mono",Menlo,Consolas,monospace;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
@@ -165,6 +165,17 @@ footer{background:var(--black);color:rgba(255,255,255,.55);padding:0 0 40px}
 }
 /* скрытие плашки Netlify (free plan) */
 #nl-badge-frame,iframe#nl-badge-frame{display:none !important;visibility:hidden !important;opacity:0 !important;pointer-events:none !important}
+/* --- плавные переходы --- */
+body{animation:fadeIn .6s ease both}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+a,.btn,button{transition:opacity .25s,background .3s,color .3s,border-color .3s,transform .3s}
+a:hover{opacity:.78}
+.btn:hover{transform:translateY(-2px)}
+.reveal{transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+section{transition:background .4s}
+img{transition:transform .5s cubic-bezier(.16,1,.3,1)}
+img:hover{transform:scale(1.02)}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
 </style>
 </head>
 <body>
